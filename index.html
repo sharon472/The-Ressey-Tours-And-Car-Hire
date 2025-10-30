@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ressey Tours & Car Hire</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Swiper CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav>
+      <div>
+        <p>THE RESSEY TOURS AND CAR HIRE</p>
+      </div>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="hire.html">Hire Vehicle</a></li>
+        <li><a href="enroll.html">Enroll</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="rental.html">Rental Prices</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO / SLOGAN -->
+ <!-- HERO / SLOGAN -->
+<section class="hero">
+  <div class="slogan">
+    <h1>Travel in Style, Comfort, and Confidence</h1>
+    <p>Book your perfect ride today — where every journey begins with trust.</p>
+  </div>
+
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search cars..." />
+    <button id="searchBtn">Search</button>
+  </div>
+
+  <div class="category">
+    <button class="categories" onclick="location.href='hire.html#luxury'">Wedding & Luxury Cars</button>
+    <button class="categories" onclick="location.href='hire.html#economy'">Compact & Economy Cars</button>
+    <button class="categories" onclick="location.href='hire.html#executive'">Executive & SUVs</button>
+    <button class="categories" onclick="location.href='hire.html#vans'">Vans & Group Travel</button>
+    <button class="categories" onclick="location.href='hire.html#airport'">Airport Pick-Up & Transfers</button>
+  </div>
+</section>
+
+<section class="featured">
+  <h2>Featured Vehicles</h2>
+
+  <!-- Swiper container -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide car-card">
+        <img src="images/rangerover.jpeg" alt="Luxury Car" />
+        <h3>Range Rover</h3>
+        <p>Luxury and power combined for your premium trips.</p>
+        <p><strong>Price:</strong> 50,000</p>
+      </div>
+      <div class="swiper-slide car-card">
+        <img src="images/Lexus-lx-570.jpeg" alt="Economy Car" />
+        <h3>Lexus LX 570</h3>
+        <p>Perfect for city rides — efficient and affordable.</p>
+        <p><strong>Price:</strong> 50,000</p>
+      </div>
+      <div class="swiper-slide car-card">
+        <img src="images/prado.jpeg" alt="SUV" />
+        <h3>Land Cruiser (V8)</h3>
+        <p>Ideal for family trips with extra comfort and space.</p>
+        <p><strong>Price:</strong> 13,000</p>
+      </div>
+      <div class="swiper-slide car-card">
+        <img src="images/Harrier.jpeg" alt="Harrier" />
+        <h3>Harrier</h3>
+        <p>Travel made easy — space and convenience.</p>
+        <p><strong>Price:</strong> 7,000</p>
+      </div>
+      <div class="swiper-slide car-card">
+        <img src="images/Crown.jpeg" alt="Van" />
+        <h3>Crown</h3>
+        <p>Travel made easy — space and convenience.</p>
+        <p><strong>Price:</strong> 7,000</p>
+      </div>
+
+      <div class="swiper-slide car-card">
+        <img src="images/Vans.jpeg" alt="Van" />
+        <h3>Vans</h3>
+        <p>Travel made easy — space and convenience.</p>
+        <p><strong>Price:</strong> 17,000</p>
+      </div>
+
+      <div class="swiper-slide car-card">
+        <img src="images/Alfard.jpeg" alt="Van" />
+        <h3>Alfard</h3>
+        <p>Travel made easy — space and convenience.</p>
+        <p><strong>Price:</strong> 50,000</p>
+      </div>
+
+      <div class="swiper-slide car-card">
+        <img src="images/PradoS.jpeg" alt="Van" />
+        <h3> Land Cruiser Prados</h3>
+        <p>Travel made easy — space and convenience.</p>
+        <p><strong>Price:</strong> 15,000</p>
+      </div>
+
+      <div class="swiper-slide car-card">
+        <img src="images/honda-fit-blue.jpeg" alt="Van" />
+        <h3>Honda-Fit</h3>
+        <p>Travel made easy — space and convenience.</p>
+        <p><strong>Price:</strong> 50,000</p>
+      </div>
+      <!-- Add more slides if needed -->
+    </div>
+    <br>
+   <br>
+    <!-- Pagination and navigation -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</section>
+
+  
+    <!-- HOW TO HIRE -->
+    <section class="how-to-hire">
+      <h2 class="title">How to Hire a Car</h2>
+      <div class="steps">
+        <div class="step">
+          <img src="https://cdn.pixabay.com/photo/2017/11/10/05/24/magnifying-glass-2935435_640.png" alt="Search Icon" />
+          <h3>1. Search</h3>
+          <p>Browse through our wide range of cars for every budget and purpose.</p>
+        </div>
+        <div class="step">
+          <img src="https://cdn.pixabay.com/photo/2017/08/04/07/58/scales-2579312_640.jpg" alt="Compare Icon" />
+          <h3>2. Compare</h3>
+          <p>Check prices, car features, and reviews to find your perfect match.</p>
+        </div>
+        <div class="step">
+          <img src="https://cdn.pixabay.com/photo/2022/05/13/04/43/vehicle-7192791_640.jpg" alt="Book Icon" />
+          <h3>3. Book</h3>
+          <p>Reserve instantly online and hit the road with peace of mind.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="why-choose">
+      <h2>Why Choose Ressey Tours & Car Hire?</h2>
+      <div class="choose-grid">
+        <div class="choose-item">
+          <h3>🚗 Wide Selection</h3>
+          <p>From small cars to luxury rides — choose what suits your trip.</p>
+        </div>
+        <div class="choose-item">
+          <h3>💰 Affordable Rates</h3>
+          <p>Transparent pricing and unbeatable deals for every traveler.</p>
+        </div>
+        <div class="choose-item">
+          <h3>🕓 24/7 Support</h3>
+          <p>We’re always here for you — before, during, and after your ride.</p>
+        </div>
+        <div class="choose-item">
+          <h3>📍 Convenient Location</h3>
+          <p>Visit us at Muthaiga Square, Along Thika Road — always near you.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CUSTOMER REVIEWS -->
+    <section class="reviews">
+      <h2>What Our Customers Say</h2>
+      <div class="review-grid">
+        <div class="review">
+          <p>“Excellent service and clean cars. Highly recommend!”</p>
+          <h4>- James K.</h4>
+        </div>
+        <div class="review">
+          <p>“Rented a Prado for a weekend trip — smooth ride and friendly staff.”</p>
+          <h4>- Anita M.</h4>
+        </div>
+        <div class="review">
+          <p>“Affordable prices and quick booking process. Loved it!”</p>
+          <h4>- Daniel O.</h4>
+        </div>
+        <div class="review">
+          <p>“They helped us get a van last minute for our group — 10/10.”</p>
+          <h4>- Susan W.</h4>
+        </div>
+        <div class="review">
+          <p>“Very professional and courteous drivers. Will book again.”</p>
+          <h4>- Peter L.</h4>
+        </div>
+        <div class="review">
+          <p>“Great customer service — they truly care about their clients.”</p>
+          <h4>- Lucy N.</h4>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Ressey Tours & Car Hire. All Rights Reserved.</p>
+  </footer>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 4, // 👈 show 4 cars at once
+    spaceBetween: 20,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      1024: { slidesPerView: 4 },
+      768: { slidesPerView: 2 },
+      480: { slidesPerView: 1 },
+    },
+  });
+</script>
+
+  <script src="script.js"></script>
+</body>
+</html>
