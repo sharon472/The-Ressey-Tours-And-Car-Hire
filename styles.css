@@ -985,7 +985,7 @@ nav a.active {
 
 /* === HERO SECTION === */
 .hire-hero {
-  background: url("blob:https://web.whatsapp.com/686009e7-2627-46a3-9ec8-05f4d70d49cc") center/cover no-repeat,
+  background: url("https://plus.unsplash.com/premium_photo-1682092310242-bc12ceb8e7c4?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njl8fHBpY3R1cmUlMjBvZiUyMGFuJTIwYWZyaWNhbiUyMGFtZXJpY2FuJTIwZmFtaWx5JTIwd2l0aCUyMGElMjBjYXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600") center/cover no-repeat,
     linear-gradient(to right, rgba(122, 120, 120, 0.897), rgba(133, 131, 131, 0.7));
   text-align: center;
   color: #f3aa22;
@@ -1174,4 +1174,141 @@ footer {
   line-height: 1.6;
  
 }
-                      
+ 
+
+
+/*enroll*/
+/* ===== DriveEase Car Rentals Styles ===== */
+
+/* General Page Settings */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff8e1; /* Light yellow background */
+  color: black;
+}
+
+/* Header Section */
+header {
+  background-color: #5b3a29; /* Brown */
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #f4d03f; /* Highlight yellow */
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: white;
+}
+
+.hero h2 {
+  color: #5b3a29;
+}
+
+.btn {
+  background-color: #f4d03f; /* Light yellow button */
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #d4ac0d;
+}
+
+/* Cars Section */
+.cars {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.car-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.car-card {
+  background-color: #fff;
+  border: 2px solid #5b3a29;
+  border-radius: 10px;
+  padding: 15px;
+  width: 250px;
+  text-align: center;
+}
+
+.car-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Booking Section */
+.booking {
+  background-color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.booking form {
+  display: inline-block;
+  text-align: left;
+  max-width: 400px;
+  background: #fff8e1;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.booking label {
+  display: block;
+  margin-top: 10px;
+}
+
+.booking input,
+.booking select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #5b3a29;
+  border-radius: 5px;
+}
+
+/* Footer Section */
+footer {
+  background-color: #5b3a29;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 20px;
+}
