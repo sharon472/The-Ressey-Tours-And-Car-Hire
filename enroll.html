@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DriveEase Car Rentals</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">THE RESSEY TOURS & CAR HIRE</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hire.html" >Hire a Car</a></li>
+        <li><a href="enroll.html"class="active">Enroll</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="rental.html">Rental Prices</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h2>Enroll Your Car & Get paid Monthly</h2>
+    <p>Affordable, reliable, and ready when you are.</p>
+    
+  </section>
+
+  <section id="cars" class="cars">
+    <h2>Categories</h2>
+    <div class="car-list">
+      <div class="car-card">
+        <img src="images\prado-fleet.jpeg" alt="Sedan" />
+        <h3>Luxury Sedan</h3>
+        <p>$60/day</p>
+      </div>
+      <div class="car-card">
+        <img src="car2.jpg" alt="SUV" />
+        <h3>Family SUV</h3>
+        <p>$80/day</p>
+      </div>
+      <div class="car-card">
+        <img src="car3.jpg" alt="Convertible" />
+        <h3>Convertible</h3>
+        <p>$100/day</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="booking" class="booking">
+    <h2>Book Your Car</h2>
+    <form>
+      <label for="car">Select Car:</label>
+      <select id="car" name="car">
+        <option value="sedan">Luxury Sedan</option>
+        <option value="suv">Family SUV</option>
+        <option value="convertible">Convertible</option>
+      </select>
+
+      <label for="pickup">Pick-up Date:</label>
+      <input type="date" id="pickup" name="pickup" required />
+
+      <label for="return">Return Date:</label>
+      <input type="date" id="return" name="return" required />
+
+      <button type="submit" class="btn">Confirm Booking</button>
+    </form>
+  </section>
+
+  <footer >
+    <p>&copy; 2025 Ressey Tours & Car Hire. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
