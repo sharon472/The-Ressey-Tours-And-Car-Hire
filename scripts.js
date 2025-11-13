@@ -128,11 +128,84 @@ const data = [
 });
 
 
+ // === enrollment html fille to interact form ===
+
+ // scripts.js
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector(".enroll-form");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    // Collect form data
+    const formData = {
+      ownerName: document.getElementById("ownerName").value.trim(),
+      email: document.getElementById("email").value.trim(),
+      phone: document.getElementById("phone").value.trim(),
+      carMakeModel: document.getElementById("carMakeModel").value.trim(),
+      year: document.getElementById("year").value,
+      mileage: document.getElementById("mileage").value,
+    };
+
+    try {
+      // Send POST request to JSON Server
+      const res = await fetch("http://localhost:3002/enrollments", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        alert(" Thank you for partnering with *The Ressey Tours & Car Hire*! Your car enrollment has been received successfully. Our review team will contact you within 24 hours to complete the verification process.");
+        form.reset(); // clear form after submission
+      } else {
+        alert("❌ Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      alert("⚠️ Could not connect to the server. Make sure JSON Server is running.");
+      console.error(err);
+    }
+  });
+});
 
 
 
+// ============================
+// 💌 Contact Form
+// ============================
+document.addEventListener("DOMContentLoaded", () => {
+  const contactForm = document.getElementById("contactForm");
+  if (contactForm) {
+    contactForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
 
+      const formData = {
+        name: document.getElementById("name").value.trim(),
+        email: document.getElementById("email").value.trim(),
+        phone: document.getElementById("phone").value.trim(),
+        message: document.getElementById("message").value.trim(),
+        date: new Date().toLocaleString(),
+      };
 
+      try {
+        const res = await fetch("http://localhost:3002/messages", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        });
 
-
-
+        if (res.ok) {
+          alert(
+            "💌 Thank you for contacting The Ressey Tours & Car Hire! ✨\nYour message has been received. Our team will reach out shortly!"
+          );
+          contactForm.reset();
+        } else {
+          alert("⚠️ Oops! Something went wrong while sending your message. Please try again later.");
+        }
+      } catch (err) {
+        alert("❌ Unable to connect to the server. Please ensure JSON Server is running on port 3001.");
+        console.error(err);
+      }
+    });
+  }
+});

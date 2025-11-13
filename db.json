@@ -1,0 +1,40 @@
+{
+  "enrollments": [
+    {
+      "id": "9162",
+      "ownerName": "ian",
+      "email": "iannjoroge5@gmail.com",
+      "phone": "0745177953",
+      "carMakeModel": "toyota prado",
+      "year": "2020",
+      "mileage": "170"
+    },
+    {
+      "id": "c8db",
+      "ownerName": "Sharon",
+      "email": "sharonnjoroge5@gmail.com",
+      "phone": "0725997121",
+      "carMakeModel": "toyota prado",
+      "year": "2020",
+      "mileage": "200"
+    }
+  ],
+  "messages": [
+    {
+      "id": "3eae",
+      "name": "Rebecca Kamau",
+      "email": "rebeccakamau5@gmail.com",
+      "phone": "0725997121",
+      "message": "love ur services",
+      "date": "11/13/2025, 8:24:36 PM"
+    },
+    {
+      "id": "cb86",
+      "name": "rebecca kamau",
+      "email": "rebeccakamau123@gmail.com",
+      "phone": "0725997121",
+      "message": "i will return the car late and add additional payment",
+      "date": "11/13/2025, 9:50:59 PM"
+    }
+  ]
+}
