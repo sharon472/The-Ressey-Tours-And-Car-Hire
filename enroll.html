@@ -1,74 +1,109 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DriveEase Car Rentals</title>
+  <title>Enroll Your Car | THE RESSEY TOURS & CAR HIRE</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
-  <header>
+  <header class="site-header">
     <div class="logo">THE RESSEY TOURS & CAR HIRE</div>
-    <nav>
+    <nav class="main-nav">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="hire.html" >Hire a Car</a></li>
-        <li><a href="enroll.html"class="active">Enroll</a></li>
+        <li><a href="hire.html">Hire a Car</a></li>
+        <li><a href="enroll.html" class="active">Enroll Your Car</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="rental.html">Rental Prices</a></li>
+        <li><a href="contact.html" >Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section id="home" class="hero">
-    <h2>Enroll Your Car & Get paid Monthly</h2>
-    <p>Affordable, reliable, and ready when you are.</p>
+  <section class="hero enroll-hero">
+    <div class="hero-content">
+      <h1>Enroll Your Vehicle & Earn Monthly</h1>
+      <p class="para">Partner with us — get your car listed, earn more, and let us handle the details.</p>
+      <a href="#enroll-form" class="btn primary-btn">Get Started</a>
+    </div>
     
   </section>
 
-  <section id="cars" class="cars">
-    <h2>Categories</h2>
-    <div class="car-list">
-      <div class="car-card">
-        <img src="images\prado-fleet.jpeg" alt="Sedan" />
-        <h3>Luxury Sedan</h3>
-        <p>$60/day</p>
+  <section class="features">
+    <div class="features-wrapper">
+      <div class="feature">
+        <h3>Flexible Earnings</h3>
+        <p>Choose the terms that work for you and earn monthly with no hassle.</p>
       </div>
-      <div class="car-card">
-        <img src="car2.jpg" alt="SUV" />
-        <h3>Family SUV</h3>
-        <p>$80/day</p>
+      <div class="feature">
+        <h3>End‐to‐End Service</h3>
+        <p>We handle booking, maintenance & support — you just collect earnings.</p>
       </div>
-      <div class="car-card">
-        <img src="car3.jpg" alt="Convertible" />
-        <h3>Convertible</h3>
-        <p>$100/day</p>
+      <div class="feature">
+        <h3>Trusted Platform</h3>
+        <p>Thousands of renters trust us. Your car gets premium exposure.</p>
       </div>
     </div>
   </section>
 
-  <section id="booking" class="booking">
-    <h2>Book Your Car</h2>
-    <form>
-      <label for="car">Select Car:</label>
-      <select id="car" name="car">
-        <option value="sedan">Luxury Sedan</option>
-        <option value="suv">Family SUV</option>
-        <option value="convertible">Convertible</option>
-      </select>
-
-      <label for="pickup">Pick-up Date:</label>
-      <input type="date" id="pickup" name="pickup" required />
-
-      <label for="return">Return Date:</label>
-      <input type="date" id="return" name="return" required />
-
-      <button type="submit" class="btn">Confirm Booking</button>
+  <section id="enroll-form" class="enroll-form-section">
+    <h2>Enroll Your Car</h2>
+    <p>Complete the form below and one of our team will contact you within 24 hours.</p>
+    <form class="enroll-form">
+      <div class="form-group">
+        <label for="ownerName">Owner Name</label>
+        <input type="text" id="ownerName" name="ownerName" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required />
+      </div>
+      <div class="form-group">
+        <label for="carMakeModel">Car Make & Model</label>
+        <input type="text" id="carMakeModel" name="carMakeModel" required />
+      </div>
+      <div class="form-group">
+        <label for="year">Year of Manufacture</label>
+        <input type="number" id="year" name="year" min="2000" required />
+      </div>
+      <div class="form-group">
+        <label for="mileage">Current Mileage/Kilometres</label>
+        <input type="number" id="mileage" name="mileage" required />
+      </div>
+      <div class="form-group">
+        <label for="photos">Upload Car Photos</label>
+        <input type="file" id="photos" name="photos" accept="image/*" multiple />
+      </div>
+      <div class="form-group">
+        <label for="terms">
+          <input type="checkbox" id="terms" name="terms" required />
+          I agree to the Terms & Conditions and certify that I am the vehicle owner.
+        </label>
+      </div>
+      <button type="submit" class="btn primary-btn">Submit for Review</button>
     </form>
   </section>
 
-  <footer >
-    <p>&copy; 2025 Ressey Tours & Car Hire. All Rights Reserved.</p>
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>&copy; 2025 THE RESSEY TOURS & CAR HIRE. All Rights Reserved.</p>
+      <p>Driven by trust, powered by you.</p>
+      <div class="social-icons">
+    <a href="https://www.instagram.com/the.ressey.tours.and.carhire/" target="_blank"><i class="bx bxl-instagram"></i></a>
+    <a href="https://www.tiktok.com/@theresseytoursandcarhire?_r=1&_t=ZM-91LaLLoJREJ" target="_blank"><i class="bx bxl-tiktok"></i></a>
+    <a href="https://www.facebook.com/resseytours" target="_blank"><i class="bx bxl-facebook"></i></a>
+  </div>
+    </div>
   </footer>
+  <script src="scripts.js" type="module"></script>
+
+
 </body>
 </html>

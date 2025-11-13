@@ -1,0 +1,180 @@
+/* ==== GLOBAL STYLES ==== */
+body {
+  background: linear-gradient(135deg, #fff8f0 0%, #fdd6a4 100%);
+  font-family: "Poppins", sans-serif;
+  color: #3b2d16;
+  line-height: 1.8;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==== HEADER & NAV ==== */
+header {
+  background: linear-gradient(90deg, #a76c35, #f79b45);
+  color: white;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(58, 22, 22, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+header p,
+header .logo {
+  font-size: 1.4em;
+  font-weight: 700;
+  color: #f7b731;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+   flex-wrap: wrap; /* wrap links if needed */
+  justify-content: flex-end; /* align links to right */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding-bottom: 5px;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #a7710d;
+  text-decoration: underline;
+}
+
+/* ==== ABOUT SECTION ==== */
+#about {
+  max-width: 1200px;
+  margin: 140px auto 100px;
+  padding: 60px 80px;
+  background: #fce5b4;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+#about h1 {
+  font-size: 2.8rem;
+  text-align: center;
+  color: #f88d01;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(59, 45, 22, 0.3);
+}
+
+#about p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.mission {
+  color: #333;
+  margin-top: 30px;
+  font-weight: 400;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 74, 173, 0.1);
+}
+
+.vision {
+  margin-top: 10px;
+}
+
+#about ol {
+  margin: 30px 0;
+  padding-left: 25px;
+}
+
+#about ol li {
+  background: #fff8f0;
+  margin-bottom: 12px;
+  padding: 12px 15px;
+  border-left: 5px solid #f7b731;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+#about ol li:hover {
+  background: #fdd6a4;
+  transform: translateX(6px);
+  box-shadow: 0 3px 10px rgba(247, 183, 49, 0.25);
+}
+
+.location {
+  background: linear-gradient(90deg, #fff8f0, #fdebc8);
+  border-left: 5px solid #004aad;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 30px;
+}
+
+/* ==== FOOTER ==== */
+footer {
+  background: linear-gradient(135deg, #8b4513, #c69753);
+  text-align: center;
+  color: white;
+  padding: 15px;
+  margin-top: 80px;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.15);
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+/* ==== RESPONSIVE DESIGN ==== */
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  #about {
+    margin: 120px 20px 80px;
+    padding: 40px 25px;
+  }
+
+  #about h1 {
+    font-size: 2rem;
+  }
+
+  #about p,
+  #about li {
+    font-size: 1rem;
+  }
+}
+footer .social-icons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+footer .social-icons a {
+  color: white;
+  font-size: 1.5rem;
+  transition: transform 0.3s, color 0.3s;
+}
+
+footer .social-icons a:hover {
+  color: #f7b731; /* gold color on hover */
+  transform: scale(1.2);
+}

@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ressey Tours & Car Hire</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
   <!-- Swiper CSS -->
 <link
@@ -20,7 +21,7 @@
 
 <body>
   <!-- HEADER -->
-  <header>
+  <header >
     <nav>
       <div>
         <p>THE RESSEY TOURS AND CAR HIRE</p>
@@ -31,6 +32,7 @@
         <li><a href="enroll.html">Enroll</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="rental.html">Rental Prices</a></li>
+        <li><a href="contact.html" >Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -39,16 +41,12 @@
   <!-- HERO / SLOGAN -->
  <!-- HERO / SLOGAN -->
 <section class="hero">
-  <div class="slogan">
+  <div class="slogan1">
     <h1>Travel in Style, Comfort, and Confidence</h1>
     <p>Book your perfect ride today — where every journey begins with trust.</p>
   </div>
 
-  <div class="search-bar">
-    <input type="text" id="searchInput" placeholder="Search cars..." />
-    <button id="searchBtn">Search</button>
-  </div>
-
+  
   <div class="category">
     <button class="categories" onclick="location.href='hire.html#luxury'">Wedding & Luxury Cars</button>
     <button class="categories" onclick="location.href='hire.html#economy'">Compact & Economy Cars</button>
@@ -153,7 +151,13 @@
           <h3>3. Book</h3>
           <p>Reserve instantly online and hit the road with peace of mind.</p>
         </div>
-      </div>
+        </div>
+        <div class="hirebutton">
+  <a href="hire.html">Hire Vehicle </a>
+</div>
+
+      
+
     </section>
 
     <!-- WHY CHOOSE US -->
@@ -178,6 +182,75 @@
         </div>
       </div>
     </section>
+    
+
+
+
+    <!-- FAQ Section -->
+<section class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-grid">
+
+    <!-- Left column -->
+    <div class="faq-column">
+      <details>
+        <summary>What is the minimum age to hire a vehicle from Ressey Tours & Car Hire?</summary>
+        <p>You must be at least <strong>23 years old</strong> with a valid driver’s license.</p>
+      </details>
+
+      <details>
+        <summary>Do I need driving experience to rent a car?</summary>
+        <p>Yes. We require at least <strong>2 years of licensed driving experience</strong> for all drivers.</p>
+      </details>
+
+      <details>
+        <summary>What documents do I need to bring when hiring a vehicle?</summary>
+        <p>You’ll need a valid <strong>driver’s license</strong>, <strong>national ID or passport</strong>, and <strong>a credit/debit card</strong> for payment.</p>
+      </details>
+
+      <details>
+        <summary>Can I hire a car if I’m under 23 years old?</summary>
+        <p>Unfortunately, no. Our insurance policy only covers drivers aged <strong>23 and above</strong>.</p>
+      </details>
+
+      <details>
+        <summary>Is there a deposit required when hiring a vehicle?</summary>
+        <p>Yes. A <strong>refundable security deposit</strong> is required and will be returned once the car is safely returned in good condition.</p>
+      </details>
+    </div>
+
+    <!-- Right column -->
+    <div class="faq-column">
+      <details>
+        <summary>Can someone else drive the rental car?</summary>
+        <p>Yes — but the <strong>additional driver</strong> must also meet the <strong>age (23+)</strong> and <strong>experience (2 years)</strong> requirements and be added to the rental agreement.</p>
+      </details>
+
+      <details>
+        <summary>What happens if I return the car late?</summary>
+        <p>Late returns may attract <strong>an additional hourly or daily fee</strong> depending on the delay duration.</p>
+      </details>
+
+      <details>
+        <summary>Do your rental cars come with insurance?</summary>
+        <p>Yes. All vehicles come with <strong>basic insurance coverage</strong>. Extra coverage options are also available for peace of mind.</p>
+      </details>
+
+      <details>
+        <summary>Can I take the rental car outside the city or on long trips?</summary>
+        <p>Absolutely! Our cars can be used for <strong>local and upcountry travel</strong>, as long as it’s within the permitted mileage and agreed routes.</p>
+      </details>
+
+      <details>
+        <summary>How can I make a reservation?</summary>
+        <p>You can <strong>book directly on our website</strong>, visit our office, or <strong>call us</strong> at <strong>+254 112 005 682</strong> to make your reservation.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+
 
     <!-- CUSTOMER REVIEWS -->
     <section class="reviews">
@@ -214,10 +287,17 @@
   <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Ressey Tours & Car Hire. All Rights Reserved.</p>
+     <p>Driven by trust, powered by you.</p>
+     <div class="social-icons">
+    <a href="https://www.instagram.com/the.ressey.tours.and.carhire/" target="_blank"><i class="bx bxl-instagram"></i></a>
+    <a href="https://www.tiktok.com/@theresseytoursandcarhire?_r=1&_t=ZM-91LaLLoJREJ" target="_blank"><i class="bx bxl-tiktok"></i></a>
+    <a href="https://www.facebook.com/resseytours" target="_blank"><i class="bx bxl-facebook"></i></a>
+  </div>
+
   </footer>
 <script>
   var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 4, // 👈 show 4 cars at once
+    slidesPerView: 4, //  show 4 cars at once
     spaceBetween: 20,
     loop: true,
     pagination: {
@@ -235,6 +315,9 @@
     },
   });
 </script>
+
+
+
 
   <script src="script.js"></script>
 </body>
