@@ -1458,3 +1458,79 @@ section {
 
 
 
+
+.booking-title {
+  font-size: 2.5rem;
+  color: #f88d01;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.booking-btn {
+  width: 100%;
+  padding: 10px;
+  background: #f88d01;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.booking-btn:hover {
+  background: #e67e00;
+}
+
+/* Optional: style the form */
+.booking-section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px;
+  background: #f5e2c5;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.booking-section .form-group {
+  margin-bottom: 15px;
+}
+
+.booking-section label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.booking-section input,
+.booking-section select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+
+/* Rental page button */
+.btn-book-now {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #f88d01; /* Orange color */
+  color: #fff;
+  width: 200px;
+  font-weight: bold;
+  font-size: 24px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  margin-top: 30px;
+}
+
+.btn-book-now:hover {
+  background-color: #e07b00; /* Darker orange on hover */
+  transform: translateY(-2px);
+}
+

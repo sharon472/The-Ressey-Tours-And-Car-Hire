@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Ressey Tours & Car Hire</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <header>
+    <h1>Ressey Tours & Car Hire - Admin Dashboard</h1>
+  </header>
+
+  <main>
+    <!-- ================= BOOKINGS ================= -->
+    <section>
+      <h2>Bookings</h2>
+      <div class="controls">
+        <input type="text" id="bookingSearch" placeholder="Search by name, car, phone...">
+        <select id="bookingFilter">
+          <option value="">All Categories</option>
+          <option value="Economy">Economy</option>
+          <option value="Compact">Compact</option>
+          <option value="Luxury">Luxury</option>
+          <option value="SUV">SUV</option>
+          <option value="Van">Van</option>
+          <option value="Mini Bus">Mini Bus</option>
+        </select>
+      </div>
+      <div id="bookingsTableContainer"></div>
+    </section>
+
+    <!-- ================= ENROLLMENTS ================= -->
+    <section>
+      <h2>Car Enrollments</h2>
+      <div id="enrollmentsTableContainer"></div>
+    </section>
+
+    <!-- ================= MESSAGES ================= -->
+    <section>
+      <h2>Messages</h2>
+      <div id="messagesTableContainer"></div>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>
