@@ -209,3 +209,79 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+
+
+// ============================
+// booking Form
+// ============================
+
+
+// Listen for the form submission
+document.getElementById("bookingForm").addEventListener("submit", function(e) {
+  e.preventDefault(); // Prevent the default form submission (page reload)
+
+  // Get values from the form inputs
+  const fullName = document.getElementById("fullName").value;
+  const phone = document.getElementById("phone").value;
+  const idNumber = document.getElementById("idNumber").value;
+  const age = parseInt(document.getElementById("age").value); // Convert age to a number
+  const car = document.getElementById("car").value;
+  const date = document.getElementById("date").value;
+  const location = document.getElementById("location").value;
+
+  // Validate ID Number length (must not exceed 10 characters)
+  if(idNumber.length > 10) {
+    alert("ID Number must not exceed 10 characters");
+    return; // Stop further execution if invalid
+  }
+
+  // Validate age (must be 24 or older)
+  if(age < 24) {
+    alert("You must be older than 23 to book a car");
+    return; // Stop further execution if invalid
+  }
+  if(age > 95) {
+  alert("Sorry, drivers older than 95 cannot book a car for safety reasons");
+  return; // Stop further execution if too old
+}
+
+
+  // Prepare the booking data object to send to the server
+  const bookingData = {
+    id: Math.random().toString(36).substr(2, 10), // Generate a random 10-character ID
+    fullName,
+    phone,
+    idNumber,
+    age,
+    car,
+    date,
+    location,
+    timestamp: new Date().toLocaleString() // Store the date and time of booking
+  };
+
+  // Send the booking data to the database (db.json endpoint)
+  fetch("http://localhost:3002/bookings", {
+    method: "POST", // HTTP method for sending new data
+    headers: { "Content-Type": "application/json" }, // Specify JSON format
+    body: JSON.stringify(bookingData) // Convert JS object to JSON string
+  })
+  .then(res => res.json()) // Convert server response to JSON
+  .then(data => {
+    // Show a confirmation alert to the user
+    alert(`Thank you, ${fullName}! Your booking for ${car} is received. We will reach out to you shortly.`);
+    document.getElementById("bookingForm").reset(); // Clear the form
+  })
+  .catch(err => {
+    // Handle errors (e.g., server not running)
+    console.error(err);
+    alert("Error submitting booking. Try again.");
+  });
+});
+
+
+document.addEventListener("keydown", function(e) {
+  if(e.shiftKey && e.key === "A") {  
+    window.location.href = "admin-login.html";
+  }
+});
