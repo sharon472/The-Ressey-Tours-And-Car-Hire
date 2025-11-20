@@ -13,7 +13,8 @@ root/
 │
 ├── index.html           # Homepage
 ├── hire.html            # Car hire/reservation page
-├── enroll.html          # Enrollment/booking page
+├── enroll.html  
+        # Enrollment/booking page
 ├── styles.css           # Main CSS file
 ├── images/              # Folder containing all images
 ├── db.json              # JSON file for sample data (vehicles, bookings)

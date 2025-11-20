@@ -17,6 +17,15 @@
       "carMakeModel": "toyota prado",
       "year": "2020",
       "mileage": "200"
+    },
+    {
+      "id": "6b91",
+      "ownerName": "ian",
+      "email": "rebeccakamau5@gmail.com",
+      "phone": "0725997121",
+      "carMakeModel": "toyota prado",
+      "year": "2022",
+      "mileage": "1400"
     }
   ],
   "messages": [
@@ -38,17 +47,6 @@
     }
   ],
   "bookings": [
-    {
-      "id": "24pqexarnn",
-      "fullName": "Ian Njoroge",
-      "phone": "0745177953",
-      "idNumber": "24925800",
-      "age": 30,
-      "car": "Lexus LX570",
-      "date": "2025-11-11",
-      "location": "Muthaiga square",
-      "timestamp": "11/14/2025, 3:37:17 PM"
-    },
     {
       "id": "e1z2wxdqx6",
       "fullName": "Rebecca kamau",
@@ -81,6 +79,17 @@
       "date": "2025-09-06",
       "location": "kasarani",
       "timestamp": "11/14/2025, 10:06:23 PM"
+    },
+    {
+      "id": "prk4zep0lu",
+      "fullName": "Ian Njoroge",
+      "phone": "0725997121",
+      "idNumber": "24925800",
+      "age": 43,
+      "car": "Suzuki",
+      "date": "2025-11-11",
+      "location": "kasarani",
+      "timestamp": "11/19/2025, 9:22:02 AM"
     }
   ]
 }
