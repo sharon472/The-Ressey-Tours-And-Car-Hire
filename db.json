@@ -44,20 +44,17 @@
       "phone": "0725997121",
       "message": "i will return the car late and add additional payment",
       "date": "11/13/2025, 9:50:59 PM"
+    },
+    {
+      "id": "e4d0",
+      "name": "Brian Njoroge",
+      "email": "Ianmhush123@gmail.com",
+      "phone": "0725997121",
+      "message": "love ur services",
+      "date": "11/23/2025, 1:25:33 AM"
     }
   ],
   "bookings": [
-    {
-      "id": "e1z2wxdqx6",
-      "fullName": "Rebecca kamau",
-      "phone": "0745177953",
-      "idNumber": "24925800",
-      "age": 60,
-      "car": "Prado (White)",
-      "date": "2025-09-23",
-      "location": "Muthaiga square",
-      "timestamp": "11/14/2025, 3:42:35 PM"
-    },
     {
       "id": "mra2xpb7lr",
       "fullName": "sharon waithira",
@@ -90,6 +87,17 @@
       "date": "2025-11-11",
       "location": "kasarani",
       "timestamp": "11/19/2025, 9:22:02 AM"
+    },
+    {
+      "id": "5qeucwuh6p",
+      "fullName": "brian Njoroge",
+      "phone": "0725997121",
+      "idNumber": "8525667",
+      "age": 25,
+      "car": "Crown",
+      "date": "2025-11-11",
+      "location": "juja",
+      "timestamp": "11/23/2025, 1:24:24 AM"
     }
   ]
 }

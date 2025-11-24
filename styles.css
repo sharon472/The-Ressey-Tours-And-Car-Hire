@@ -1310,11 +1310,21 @@ details[open] summary::after {
 
 
 /* ENROLL STYLE */
+
+
+
+
+
 h1{
   color: #111111;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  display: flex;
 }
 .para{
   color: #000;
+  justify-content: center;
 }
 /* Buttons */
 .btn {
@@ -1323,6 +1333,7 @@ h1{
   font-size: 1rem;
   font-weight:5600;
   border: none;
+  
   border-radius: 6px;
   cursor: pointer;
   transition: background .3s ease, transform .3s ease;
@@ -1336,6 +1347,60 @@ h1{
   transform: translateY(-2px);
 }
    
+
+
+
+
+
+
+/* ENROLL STYLE */
+.enroll-hero {
+  display: flex;
+  justify-content: center;   /* horizontal center */
+  align-items: center;       /* vertical center */
+  text-align: center;
+  min-height: 40vh;          /* or 100vh if full screen */
+  background: linear-gradient(135deg, #fff8f0 0%, #fdd6a4 100%);
+}
+
+.hero-content h1 {
+  color: #111111;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content .para {
+  color: #000;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 15px 35px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background .3s ease, transform .3s ease;
+}
+
+.primary-btn {
+  background: #f7d381;
+  color: #111;
+}
+
+.primary-btn:hover {
+  background: #f5b561;
+  transform: translateY(-2px);
+}
+
+
+
+
+
 /* Features Section */
 .features {
   background: #f7d8b6;
@@ -1359,6 +1424,58 @@ h1{
 .feature p {
   font-size: 1rem;
   color: #555;
+}
+
+  
+
+/* Features Section */
+.features {
+
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.features-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.feature {
+  flex: 1 1 250px;
+  text-align: center;
+  background: #f7d381;
+  border-radius: 15px;
+  padding: 25px 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.feature h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.feature p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+@media(max-width: 768px){
+  .features-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 
