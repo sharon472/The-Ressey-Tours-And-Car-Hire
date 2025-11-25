@@ -1631,17 +1631,17 @@ section {
 /* Rental page button */
 .btn-book-now {
   display: inline-block;
-  padding: 12px 25px;
+  padding: 40px 30px;
   background-color: #f88d01; /* Orange color */
   color: #fff;
-  width: 200px;
+  width: 300px;
   font-weight: bold;
   font-size: 24px;
   text-decoration: none;
   border-radius: 8px;
   transition: background-color 0.3s, transform 0.2s;
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-  margin-top: 30px;
+  margin-top: 15px;
 }
 
 .btn-book-now:hover {
@@ -1708,4 +1708,19 @@ section {
 
 .category-card ul li strong {
   color: #2b7a78;
+}
+
+
+.bttn{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  background-color: none;
+  margin-bottom: 30px;
+  font-size: 1.5rem;           /* bigger text */
+  font-weight: 900;         
+  
+  border-radius: 12px;
+
+
 }
