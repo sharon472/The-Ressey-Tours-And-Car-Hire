@@ -666,96 +666,235 @@
   </section>
 
 <section id="book" class="booking-section">
-  <h1 class="booking-title">Book a Car</h1>
 
-  <form id="bookingForm">
-    <div class="form-group">
-      <label for="fullName">Full Name</label>
-      <input type="text" id="fullName" required />
+  <div class="booking-card">
+
+    <!-- Header -->
+    <div class="booking-header">
+      <div class="booking-icon">&#128197;</div>
+      <div>
+        <h2 class="booking-title">Book a Car</h2>
+        <p class="booking-subtitle">Fill in your details below. Our team confirms within <strong>1 hour</strong>.</p>
+      </div>
     </div>
 
-    <div class="form-group">
-      <label for="phone">Phone</label>
-      <input type="tel" id="phone" required />
+    <!-- Error banner -->
+    <div id="bookingError" class="booking-error" style="display:none;"></div>
+
+    <!-- Selected car banner (shown when pre-selected from a car card) -->
+    <div id="carBanner" class="car-selected-banner" style="display:none;">
+      <div class="car-banner-info">
+        <div class="car-banner-icon">&#128663;</div>
+        <div>
+          <div class="car-banner-label">Selected Vehicle</div>
+          <div id="selectedCarName" class="car-banner-name">—</div>
+          <div id="selectedCarRate" class="car-banner-rate">—</div>
+        </div>
+      </div>
+      <button type="button" class="car-banner-change" id="changeCar">&#8592; Change car</button>
     </div>
 
-    <div class="form-group">
-      <label for="idNumber">ID Number</label>
-      <input type="text" id="idNumber" maxlength="10" required />
-    </div>
+    <form id="bookingForm" autocomplete="off">
 
-    <div class="form-group">
-      <label for="age">Age</label>
-      <input type="number" id="age" min="24" required />
-    </div>
+      <!-- Hidden car fields -->
+      <input type="hidden" id="carHidden" value="" />
+      <input type="hidden" id="carPriceHidden" value="0" />
 
-    <div class="form-group">
-      <label for="car">Select Car</label>
-      <select id="car" required>
-  <option value="">-- Choose a Car --</option>
+      <!-- Car dropdown (shown when no car pre-selected) -->
+      <div id="carSelectGroup" class="form-group">
+        <label for="car">Select Car <span class="req">*</span></label>
+        <select id="car">
+          <option value="">— Scroll up and click "Book This Car" on any vehicle —</option>
+          <optgroup label="Luxury Cars">
+            <option value="Land Cruiser ZX (V8)|25000">Land Cruiser ZX (V8) — KES 25,000/day</option>
+            <option value="Lexus LX 570|50000">Lexus LX 570 — KES 50,000/day</option>
+            <option value="Range Rover|50000">Range Rover — KES 50,000/day</option>
+            <option value="Toyota Prado (Black)|15000">Toyota Prado (Black) — KES 15,000/day</option>
+            <option value="Toyota Prado (White)|15000">Toyota Prado (White) — KES 15,000/day</option>
+          </optgroup>
+          <optgroup label="SUVs">
+            <option value="Mazda CX-5|8000">Mazda CX-5 — KES 8,000/day</option>
+            <option value="Mazda CX-5 (Black)|8000">Mazda CX-5 (Black) — KES 8,000/day</option>
+            <option value="Double Cab|13000">Double Cab — KES 13,000/day</option>
+            <option value="Crown|8000">Crown — KES 8,000/day</option>
+            <option value="Crown (Black)|8000">Crown (Black) — KES 8,000/day</option>
+            <option value="Crown (White)|8000">Crown (White) — KES 8,000/day</option>
+            <option value="Suzuki|9000">Suzuki — KES 9,000/day</option>
+            <option value="Harrier|8000">Harrier — KES 8,000/day</option>
+            <option value="Extrail|8000">Extrail — KES 8,000/day</option>
+          </optgroup>
+          <optgroup label="Saloon &amp; Economy Cars">
+            <option value="Mazda Demio|6000">Mazda Demio — KES 6,000/day</option>
+            <option value="Mazda Demio (Black)|5000">Mazda Demio (Black) — KES 5,000/day</option>
+            <option value="Toyota Vitz|5000">Toyota Vitz — KES 5,000/day</option>
+            <option value="Toyota Fielder|5000">Toyota Fielder — KES 5,000/day</option>
+            <option value="Toyota Fielder (White)|4000">Toyota Fielder (White) — KES 4,000/day</option>
+            <option value="Toyota Fielder (Black)|4000">Toyota Fielder (Black) — KES 4,000/day</option>
+            <option value="Nissan Note|3000">Nissan Note — KES 3,000/day</option>
+            <option value="Honda Fit (Orange)|5000">Honda Fit (Orange) — KES 5,000/day</option>
+          </optgroup>
+          <optgroup label="Vans &amp; Minivans">
+            <option value="10 Seater Van|12000">10 Seater Van — KES 12,000/day</option>
+            <option value="14-16 Seater Van|17000">(14 &amp; 16) Seater Van — KES 17,000/day</option>
+            <option value="18 Seater Van|20000">18 Seater Van — KES 20,000/day</option>
+            <option value="Toyota Alphard (White)|17000">Toyota Alphard (White) — KES 17,000/day</option>
+            <option value="Toyota Alphard (Black)|17000">Toyota Alphard (Black) — KES 17,000/day</option>
+            <option value="Toyota Noah (Grey)|6000">Toyota Noah (Grey) — KES 6,000/day</option>
+            <option value="Toyota Noah (Green)|6000">Toyota Noah (Green) — KES 6,000/day</option>
+          </optgroup>
+          <optgroup label="Airport Convoy">
+            <option value="Toyota Prado (Convoy)|75000">Toyota Prado (Convoy) — KES 75,000/day</option>
+            <option value="14-16 Seater Van (Convoy)|50000">(14 &amp; 16) Seater Van (Convoy) — KES 50,000/day</option>
+          </optgroup>
+        </select>
+      </div>
 
-  <!-- SUVs / Executive Cars -->
-  <option>Land Cruiser ZX (V8)</option>
-  <option>Lexus LX 570</option>
-  <option>Range Rover</option>
-  <option>Toyota Prado (Black)</option>
-  <option>Toyota Prado (White)</option>
-  <option>Mazda CX-5</option>
-  <option>Mazda CX-5 (Black)</option>
-  <option>Double Cab</option>
-  <option>Crown</option>
-  <option>Crown (Black)</option>
-  <option>Crown (White)</option>
-  <option>Suzuki</option>
-  <option>Harrier</option>
-  <option>Extrail</option>
+      <!-- ── STEP 1: YOUR DETAILS ─────────────────────────── -->
+      <div class="booking-step">
+        <div class="step-header">
+          <span class="step-num">1</span>
+          <span class="step-label">Your Details</span>
+        </div>
 
-  <!-- Saloon & Economy Cars -->
-  <option>Mazda Demio</option>
-  <option>Mazda Demio (Black)</option>
-  <option>Toyota Vitz</option>
-  <option>Toyota Vitz (Red)</option>
-  <option>Fielder (White)</option>
-  <option>Toyota Fielder</option>
-  <option>Toyota Fielder (Black)</option>
-  <option>Toyota Fielder (White)</option>
-  <option>Nissan Note</option>
-  <option>Honda Fit (Orange)</option>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fullName">Full Name <span class="req">*</span></label>
+            <input type="text" id="fullName" placeholder="e.g. John Kamau" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number <span class="req">*</span></label>
+            <input type="tel" id="phone" placeholder="e.g. 0712 345 678" required />
+          </div>
+        </div>
 
-  <!-- Vans / Mini Vans -->
-  <option>10 Seater Van</option>
-  <option>(14 & 16) Seater Van</option>
-  <option>18 Seater Van</option>
-  <option>(14 & 16) Seater Van (White Mint)</option>
-  <option>(14 & 16) Seater Van (Grey)</option>
-  <option>Toyota Alphard (White)</option>
-  <option>Toyota Alphard (Black)</option>
-  <option>Toyota Noah (Grey)</option>
-  <option>Toyota Noah (Green)</option>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="age">Age <span class="req">*</span></label>
+            <input type="number" id="age" min="24" max="95" placeholder="Must be 24 or above" required />
+          </div>
+          <div class="form-group">
+            <label>Need a Driver?</label>
+            <div class="driver-toggle-group">
+              <label class="driver-option" id="driverNo">
+                <input type="radio" name="withDriver" value="no" checked />
+                <span>&#128664; Self-drive</span>
+              </label>
+              <label class="driver-option" id="driverYes">
+                <input type="radio" name="withDriver" value="yes" />
+                <span>&#128104;&#8205;&#128640; With Driver</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  <!-- Airport Pickup -->
-  <option>Toyota Prado (Convoy)</option>
-  <option>(14 & 16) Seater Van (Convoy)</option>
+      <!-- ── STEP 2: TRIP DETAILS ────────────────────────── -->
+      <div class="booking-step">
+        <div class="step-header">
+          <span class="step-num">2</span>
+          <span class="step-label">Trip Details</span>
+        </div>
 
-</select>
+        <!-- Dates -->
+        <div class="form-row date-row">
+          <div class="form-group">
+            <label for="pickupDate">Pick-up Date <span class="req">*</span></label>
+            <input type="date" id="pickupDate" required />
+          </div>
+          <div class="date-arrow">&#8594;</div>
+          <div class="form-group">
+            <label for="returnDate">Return Date <span class="req">*</span></label>
+            <input type="date" id="returnDate" required />
+          </div>
+        </div>
 
-    </div>
+        <!-- Duration pill -->
+        <div id="durationDisplay" class="duration-display" style="display:none;">
+          <span id="durationText"></span>
+        </div>
 
-    <div class="form-group">
-      <label for="date">Date of Booking</label>
-      <input type="date" id="date" required />
-    </div>
+        <!-- Location + Destination -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="location">Pick-up Location <span class="req">*</span></label>
+            <input type="text" id="location" placeholder="e.g. JKIA, Westlands, Nairobi CBD" required />
+          </div>
+          <div class="form-group">
+            <label for="destination">Where are you going? <span class="req">*</span></label>
+            <select id="destination" required>
+              <option value="">— Select destination —</option>
+              <option>Within Nairobi</option>
+              <option>Nairobi &#8594; Nakuru</option>
+              <option>Nairobi &#8594; Mombasa</option>
+              <option>Nairobi &#8594; Kisumu</option>
+              <option>Nairobi &#8594; Eldoret</option>
+              <option>Nairobi &#8594; Nanyuki / Mt Kenya</option>
+              <option>Nairobi &#8594; Amboseli / Tsavo</option>
+              <option>Nairobi &#8594; Maasai Mara</option>
+              <option>Nairobi &#8594; Diani Beach</option>
+              <option>Cross-border (Uganda, Tanzania, Rwanda)</option>
+              <option>Other — I'll specify in notes</option>
+            </select>
+          </div>
+        </div>
+      </div>
 
-    <div class="form-group">
-      <label for="location">Pick-up Location</label>
-      <input type="text" id="location" required />
-    </div>
+      <!-- ── LIVE PRICE CALCULATOR ──────────────────────── -->
+      <div id="priceCalculator" class="price-calculator" style="display:none;">
+        <div class="price-calc-header">&#128176; Estimated Cost</div>
+        <div class="price-rows">
+          <div class="price-row"><span>Vehicle</span><strong id="pcCarName">—</strong></div>
+          <div class="price-row"><span>Daily Rate</span><strong id="pcDailyRate">—</strong></div>
+          <div class="price-row"><span>Duration</span><strong id="pcDuration">—</strong></div>
+          <div class="price-row driver-row" id="pcDriverRow" style="display:none;">
+            <span>Driver Fee</span><strong id="pcDriverFee">—</strong>
+          </div>
+          <div class="price-divider"></div>
+          <div class="price-row price-total">
+            <span>Estimated Total</span>
+            <strong id="pcTotal">—</strong>
+          </div>
+        </div>
+        <p class="price-note">&#9432; Our team will confirm the final price when they call you.</p>
+      </div>
 
-    <button type="submit" class="booking-btn">Book Now</button>
+      <!-- ── SPECIAL REQUESTS ───────────────────────────── -->
+      <div class="form-group">
+        <label for="bookingMessage">Special Request <span class="optional">(optional)</span></label>
+        <textarea id="bookingMessage" rows="3" placeholder="Any special requests? e.g. airport pickup time, child seat, multiple drop-offs, specific return location..."></textarea>
+      </div>
 
+      <!-- Trust badges -->
+      <div class="trust-badges">
+        <span>&#10003; No deposit required</span>
+        <span>&#10003; Confirmed within 1 hour</span>
+        <span>&#10003; Free cancellation</span>
+      </div>
 
-  </form>
+      <button type="submit" class="booking-btn" id="bookingSubmitBtn">
+        <span id="btnText">Send Booking Request</span>
+        <span id="btnSpinner" class="btn-spinner" style="display:none;"></span>
+      </button>
+
+    </form>
+  </div>
 </section>
+
+<!-- ── Booking Confirmation Modal ───────────────────────────────────── -->
+<div id="bookingModal" class="booking-modal-overlay" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
+  <div class="booking-modal">
+    <div class="modal-icon">&#10003;</div>
+    <h2 id="modalHeading" class="modal-title">Booking Request Received!</h2>
+    <p class="modal-ref-label">Your booking reference</p>
+    <p id="modalRef" class="modal-ref">—</p>
+    <p class="modal-message">Our team will call you within <strong>1 hour</strong> to confirm your booking and arrange payment.</p>
+    <a id="modalWhatsApp" href="#" target="_blank" rel="noopener noreferrer" class="modal-whatsapp-btn">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Chat with us on WhatsApp
+    </a>
+    <button class="modal-close-btn" id="modalCloseBtn">Close</button>
+  </div>
+</div>
 
 
 
@@ -771,7 +910,13 @@
 
   </footer>
   
+<script src="fleetflow-config.js"></script>
 <script src="scripts.js" type="module"></script>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/254727347926?text=Hi%20Ressey%2C%20I%20would%20like%20to%20book%20a%20car." class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <i class="bx bxl-whatsapp"></i>
+</a>
 </body>
 </html>
 

@@ -276,6 +276,42 @@ footer p:hover {
     justify-content: center;
     gap: 15px;
   }
+
+  /* Contact grid: stack columns on mobile */
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-hero {
+    padding: 6rem 1rem 2rem;
+  }
+
+  .contact-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .contact-main {
+    padding: 0 1rem;
+    margin: 2rem auto;
+  }
+
+  .contact-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .contact-buttons {
+    flex-direction: column;
+  }
+
+  .contact-buttons .btn {
+    text-align: center;
+  }
 }
 
 /* ==== INFO CARD SOCIAL ICONS ==== */

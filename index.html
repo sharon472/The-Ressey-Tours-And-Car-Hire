@@ -1,324 +1,757 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ressey Tours & Car Hire</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <meta name="description" content="Ressey Tours & Car Hire — Kenya's premier car hire. Luxury SUVs, economy cars, airport transfers and chauffeured travel. Book online in minutes." />
+  <title>Ressey Tours & Car Hire — Travel in Comfort Across Kenya</title>
 
-  <!-- Swiper CSS -->
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
-
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="home.css" />
 </head>
 
-<body>
-  <!-- HEADER -->
-  <header >
-    <nav>
-      <div>
-        <p>THE RESSEY TOURS AND CAR HIRE</p>
-      </div>
-      <ul>
+<body class="home-page">
+
+  <!-- ═══════════════════════════ NAVIGATION ══════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+
+      <a href="index.html" class="nav-brand">
+        <img src="images/Ressy-logo.jpeg" alt="Ressey Tours logo" class="nav-logo-img" />
+        <div>
+          <div class="brand-name">RESSEY TOURS</div>
+          <div class="brand-sub">&amp; Car Hire</div>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
         <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="hire.html">Hire Vehicle</a></li>
+        <li><a href="hire.html">Hire a Car</a></li>
         <li><a href="enroll.html">Enroll</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="rental.html">Rental Prices</a></li>
-        <li><a href="contact.html" >Contact</a></li>
+        <li><a href="rental.html">Prices</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
-    </nav>
-  </header>
-<br >
-<br>
-  <!-- HERO / SLOGAN -->
- <!-- HERO / SLOGAN -->
-<section class="hero">
-  <div class="slogan1">
-    <h1>Travel in Style, Comfort, and Confidence</h1>
-    <p>Book your perfect ride today — where every journey begins with trust.</p>
-  </div>
 
-  
-  <div class="category">
-    <button class="categories" onclick="location.href='hire.html#luxury'">Wedding & Luxury Cars</button>
-    <button class="categories" onclick="location.href='hire.html#economy'">Compact & Economy Cars</button>
-    <button class="categories" onclick="location.href='hire.html#executive'">Executive & SUVs</button>
-    <button class="categories" onclick="location.href='hire.html#vans'">Vans & Group Travel</button>
-    <button class="categories" onclick="location.href='hire.html#airport'">Airport Pick-Up & Transfers</button>
-  </div>
-</section>
-
-<section class="featured">
-  <h2>Featured Vehicles</h2>
-
-  <!-- Swiper container -->
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide car-card">
-        <img src="images/rangerover.jpeg" alt="Luxury Car" />
-        <h3>Range Rover</h3>
-        <p>Luxury and power combined for your premium trips.</p>
-        <p><strong>Price:</strong> 50,000</p>
-      </div>
-      <div class="swiper-slide car-card">
-        <img src="images/Lexus-lx-570.jpeg" alt="Economy Car" />
-        <h3>Lexus LX 570</h3>
-        <p>Perfect for city rides — efficient and affordable.</p>
-        <p><strong>Price:</strong> 50,000</p>
-      </div>
-      <div class="swiper-slide car-card">
-        <img src="images/prado.jpeg" alt="SUV" />
-        <h3>Land Cruiser (V8)</h3>
-        <p>Ideal for family trips with extra comfort and space.</p>
-        <p><strong>Price:</strong> 13,000</p>
-      </div>
-      <div class="swiper-slide car-card">
-        <img src="images/Harrier.jpeg" alt="Harrier" />
-        <h3>Harrier</h3>
-        <p>Travel made easy — space and convenience.</p>
-        <p><strong>Price:</strong> 7,000</p>
-      </div>
-      <div class="swiper-slide car-card">
-        <img src="images/Crown.jpeg" alt="Van" />
-        <h3>Crown</h3>
-        <p>Travel made easy — space and convenience.</p>
-        <p><strong>Price:</strong> 7,000</p>
+      <div class="nav-right">
+        <a href="tel:+254727347926" class="nav-tel">
+          <i class="bx bx-phone"></i> 0727 347 926
+        </a>
+        <a href="hire.html#book" class="btn-book-nav">
+          <i class="bx bx-calendar-check"></i> Book Now
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <i class="bx bx-menu"></i>
+        </button>
       </div>
 
-      <div class="swiper-slide car-card">
-        <img src="images/Vans.jpeg" alt="Van" />
-        <h3>Vans</h3>
-        <p>Travel made easy — space and convenience.</p>
-        <p><strong>Price:</strong> 17,000</p>
-      </div>
-
-      <div class="swiper-slide car-card">
-        <img src="images/Alfard.jpeg" alt="Van" />
-        <h3>Alfard</h3>
-        <p>Travel made easy — space and convenience.</p>
-        <p><strong>Price:</strong> 50,000</p>
-      </div>
-
-      <div class="swiper-slide car-card">
-        <img src="images/PradoS.jpeg" alt="Van" />
-        <h3> Land Cruiser Prados</h3>
-        <p>Travel made easy — space and convenience.</p>
-        <p><strong>Price:</strong> 15,000</p>
-      </div>
-
-      <div class="swiper-slide car-card">
-        <img src="images/honda-fit-blue.jpeg" alt="Van" />
-        <h3>Honda-Fit</h3>
-        <p>Travel made easy — space and convenience.</p>
-        <p><strong>Price:</strong> 50,000</p>
-      </div>
-      <!-- Add more slides if needed -->
     </div>
-    <br>
-   <br>
-    <!-- Pagination and navigation -->
-    <div class="swiper-pagination"></div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
-</section>
+  </nav>
 
-  
-    <!-- HOW TO HIRE -->
-    <section class="how-to-hire">
-      <h2 class="title">How to Hire a Car</h2>
-      <div class="steps">
-        <div class="step">
-          <img src="https://cdn.pixabay.com/photo/2017/11/10/05/24/magnifying-glass-2935435_640.png" alt="Search Icon" />
-          <h3>1. Search</h3>
-          <p>Browse through our wide range of cars for every budget and purpose.</p>
-        </div>
-        <div class="step">
-          <img src="https://cdn.pixabay.com/photo/2017/08/04/07/58/scales-2579312_640.jpg" alt="Compare Icon" />
-          <h3>2. Compare</h3>
-          <p>Check prices, car features, and reviews to find your perfect match.</p>
-        </div>
-        <div class="step">
-          <img src="https://cdn.pixabay.com/photo/2022/05/13/04/43/vehicle-7192791_640.jpg" alt="Book Icon" />
-          <h3>3. Book</h3>
-          <p>Reserve instantly online and hit the road with peace of mind.</p>
-        </div>
-        </div>
-        <div class="hirebutton">
-  <a href="hire.html">Hire Vehicle </a>
-</div>
+  <!-- ═══════════════════════════ HERO ════════════════════════════ -->
+  <section class="hero-section">
+    <div class="hero-inner">
 
-      
+      <!-- Left: Text -->
+      <div class="hero-text-col">
+        <div class="hero-badge">
+          <i class="bx bxs-award"></i>
+          Kenya's Most Trusted Car Hire
+        </div>
 
-    </section>
+        <h1 class="hero-h1">
+          Drive Kenya
+          <span class="hero-span">in Luxury &amp; Comfort</span>
+        </h1>
 
-    <!-- WHY CHOOSE US -->
-    <section class="why-choose">
-      <h2>Why Choose Ressey Tours & Car Hire?</h2>
-      <div class="choose-grid">
-        <div class="choose-item">
-          <h3>🚗 Wide Selection</h3>
-          <p>From small cars to luxury rides — choose what suits your trip.</p>
+        <p class="hero-p">
+          From Nairobi to the Maasai Mara, airport pickups to cross-country safaris —
+          choose from 50+ premium vehicles with professional drivers or self-drive.
+        </p>
+
+        <div class="hero-actions">
+          <a href="hire.html" class="btn-primary">
+            <i class="bx bx-car"></i> Explore Our Fleet
+          </a>
+          <a href="hire.html#book" class="btn-secondary">
+            <i class="bx bx-calendar"></i> Book a Car
+          </a>
         </div>
-        <div class="choose-item">
-          <h3>💰 Affordable Rates</h3>
-          <p>Transparent pricing and unbeatable deals for every traveler.</p>
-        </div>
-        <div class="choose-item">
-          <h3>🕓 24/7 Support</h3>
-          <p>We’re always here for you — before, during, and after your ride.</p>
-        </div>
-        <div class="choose-item">
-          <h3>📍 Convenient Location</h3>
-          <p>Visit us at Muthaiga Square, Along Thika Road — always near you.</p>
+
+        <div class="hero-trust">
+          <div class="trust-badge">
+            <i class="bx bx-check-circle"></i> No hidden fees
+          </div>
+          <div class="trust-badge">
+            <i class="bx bx-check-circle"></i> 1-hour confirmation
+          </div>
+          <div class="trust-badge">
+            <i class="bx bx-check-circle"></i> Door-to-door delivery
+          </div>
         </div>
       </div>
-    </section>
-    
 
+      <!-- Right: Image -->
+      <div class="hero-image-col">
+        <div class="hero-img-wrap">
+          <img src="images/lux-prados.jpeg" alt="Ressey Tours Premium Fleet — Land Cruiser Prado" class="hero-car-img" loading="eager" />
+          <div class="hero-img-float">
+            <div class="hif-icon"><i class="bx bx-car"></i></div>
+            <div>
+              <div class="hif-num">50+</div>
+              <div class="hif-label">Vehicles Available</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-
-    <!-- FAQ Section -->
-<section class="faq-section">
-  <h2>Frequently Asked Questions</h2>
-
-  <div class="faq-grid">
-
-    <!-- Left column -->
-    <div class="faq-column">
-      <details>
-        <summary>What is the minimum age to hire a vehicle from Ressey Tours & Car Hire?</summary>
-        <p>You must be at least <strong>23 years old</strong> with a valid driver’s license.</p>
-      </details>
-
-      <details>
-        <summary>Do I need driving experience to rent a car?</summary>
-        <p>Yes. We require at least <strong>2 years of licensed driving experience</strong> for all drivers.</p>
-      </details>
-
-      <details>
-        <summary>What documents do I need to bring when hiring a vehicle?</summary>
-        <p>You’ll need a valid <strong>driver’s license</strong>, <strong>national ID or passport</strong>, and <strong>a credit/debit card</strong> for payment.</p>
-      </details>
-
-      <details>
-        <summary>Can I hire a car if I’m under 23 years old?</summary>
-        <p>Unfortunately, no. Our insurance policy only covers drivers aged <strong>23 and above</strong>.</p>
-      </details>
-
-      <details>
-        <summary>Is there a deposit required when hiring a vehicle?</summary>
-        <p>Yes. A <strong>refundable security deposit</strong> is required and will be returned once the car is safely returned in good condition.</p>
-      </details>
     </div>
 
-    <!-- Right column -->
-    <div class="faq-column">
-      <details>
-        <summary>Can someone else drive the rental car?</summary>
-        <p>Yes — but the <strong>additional driver</strong> must also meet the <strong>age (23+)</strong> and <strong>experience (2 years)</strong> requirements and be added to the rental agreement.</p>
-      </details>
-
-      <details>
-        <summary>What happens if I return the car late?</summary>
-        <p>Late returns may attract <strong>an additional hourly or daily fee</strong> depending on the delay duration.</p>
-      </details>
-
-      <details>
-        <summary>Do your rental cars come with insurance?</summary>
-        <p>Yes. All vehicles come with <strong>basic insurance coverage</strong>. Extra coverage options are also available for peace of mind.</p>
-      </details>
-
-      <details>
-        <summary>Can I take the rental car outside the city or on long trips?</summary>
-        <p>Absolutely! Our cars can be used for <strong>local and upcountry travel</strong>, as long as it’s within the permitted mileage and agreed routes.</p>
-      </details>
-
-      <details>
-        <summary>How can I make a reservation?</summary>
-        <p>You can <strong>book directly on our website</strong>, visit our office, or <strong>call us</strong> at <strong>+254 112 005 682</strong> to make your reservation.</p>
-      </details>
+    <!-- Booking Strip -->
+    <div class="booking-strip">
+      <div class="booking-strip-inner">
+        <div class="bs-item">
+          <i class="bx bx-car"></i> 50+ Vehicles
+        </div>
+        <div class="bs-div"></div>
+        <div class="bs-item">
+          <i class="bx bx-shield-check"></i> Fully Insured
+        </div>
+        <div class="bs-div"></div>
+        <div class="bs-item">
+          <i class="bx bx-map-pin"></i> Nairobi &amp; All Kenya
+        </div>
+        <div class="bs-div"></div>
+        <div class="bs-item">
+          <i class="bx bx-support"></i> 24/7 Support
+        </div>
+        <a href="hire.html#book" class="bs-cta">Book Now</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- ═══════════════════════════ STATS ═══════════════════════════ -->
+  <section class="stats-section">
+    <div class="stats-wrap">
+      <div class="stat-card">
+        <div class="stat-num">50<sup>+</sup></div>
+        <div class="stat-label">Vehicles in Fleet</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">5<sup>+</sup></div>
+        <div class="stat-label">Years of Service</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">1,200<sup>+</sup></div>
+        <div class="stat-label">Happy Customers</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">24/7</div>
+        <div class="stat-label">Available Support</div>
+      </div>
+    </div>
+  </section>
 
+  <!-- ═══════════════════════════ SERVICES ════════════════════════ -->
+  <section class="services-section">
+    <div class="section-wrap">
+      <div class="section-head center">
+        <span class="eyebrow">What We Offer</span>
+        <h2 class="section-title">Services for Every Journey</h2>
+        <p class="section-sub">Whether you're heading to the airport, planning a safari, or need a reliable daily driver — we have you covered from start to finish.</p>
+      </div>
 
-    <!-- CUSTOMER REVIEWS -->
-    <section class="reviews">
-      <h2>What Our Customers Say</h2>
-      <div class="review-grid">
-        <div class="review">
-          <p>“Excellent service and clean cars. Highly recommend!”</p>
-          <h4>- James K.</h4>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="svc-icon orange"><i class="bx bx-car"></i></div>
+          <h3>Self-Drive Hire</h3>
+          <p>Take the wheel at your own pace. Choose from economy, SUV or luxury vehicles and explore Kenya freely — from KES 3,000/day.</p>
+          <a href="hire.html" class="svc-link">Browse Cars <i class="bx bx-right-arrow-alt"></i></a>
         </div>
-        <div class="review">
-          <p>“Rented a Prado for a weekend trip — smooth ride and friendly staff.”</p>
-          <h4>- Anita M.</h4>
+
+        <div class="service-card featured-svc">
+          <div class="svc-icon blue"><i class="bx bx-user-circle"></i></div>
+          <h3>Chauffeured Travel</h3>
+          <p>Sit back and arrive in style. Our professional, vetted drivers handle every route — from city commutes to cross-country safaris.</p>
+          <a href="hire.html#book" class="svc-link">Book a Driver <i class="bx bx-right-arrow-alt"></i></a>
         </div>
-        <div class="review">
-          <p>“Affordable prices and quick booking process. Loved it!”</p>
-          <h4>- Daniel O.</h4>
-        </div>
-        <div class="review">
-          <p>“They helped us get a van last minute for our group — 10/10.”</p>
-          <h4>- Susan W.</h4>
-        </div>
-        <div class="review">
-          <p>“Very professional and courteous drivers. Will book again.”</p>
-          <h4>- Peter L.</h4>
-        </div>
-        <div class="review">
-          <p>“Great customer service — they truly care about their clients.”</p>
-          <h4>- Lucy N.</h4>
+
+        <div class="service-card">
+          <div class="svc-icon orange"><i class="bx bxs-plane-alt"></i></div>
+          <h3>Airport Transfers</h3>
+          <p>Punctual JKIA and Wilson Airport pickups and drop-offs. Flight-tracked arrivals, clean vehicles, and courteous drivers — every time.</p>
+          <a href="hire.html#airport" class="svc-link">Book Transfer <i class="bx bx-right-arrow-alt"></i></a>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2025 Ressey Tours & Car Hire. All Rights Reserved.</p>
-     <p>Driven by trust, powered by you.</p>
-     <div class="social-icons">
-    <a href="https://www.instagram.com/the.ressey.tours.and.carhire/" target="_blank"><i class="bx bxl-instagram"></i></a>
-    <a href="https://www.tiktok.com/@theresseytoursandcarhire?_r=1&_t=ZM-91LaLLoJREJ" target="_blank"><i class="bx bxl-tiktok"></i></a>
-    <a href="https://www.facebook.com/share/1NKqjsqNq9/" target="_blank"><i class="bx bxl-facebook"></i></a>
-  </div>
+  <!-- ═══════════════════════════ FLEET SHOWCASE ══════════════════ -->
+  <section class="fleet-section" id="fleet">
+    <div class="section-wrap">
+      <div class="section-head split">
+        <div>
+          <span class="eyebrow">Our Fleet</span>
+          <h2 class="section-title">Featured Vehicles</h2>
+        </div>
+        <a href="hire.html" class="btn-outline">View All Vehicles &rarr;</a>
+      </div>
 
+      <div class="swiper fleet-swiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide fleet-card">
+            <div class="fc-img">
+              <img src="images/rangerover.jpeg" alt="Range Rover" loading="lazy" />
+              <div class="fc-overlay">
+                <a href="hire.html#book" class="fc-overlay-btn">Book This Car</a>
+              </div>
+              <span class="fc-cat luxury">Luxury</span>
+            </div>
+            <div class="fc-body">
+              <h3>Range Rover</h3>
+              <p>Prestige and power for your most important journeys.</p>
+              <div class="fc-foot">
+                <span class="fc-price">KES 50,000 <small>/day</small></span>
+                <a href="hire.html" class="fc-arrow"><i class="bx bx-right-arrow-alt"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide fleet-card">
+            <div class="fc-img">
+              <img src="images/Lexus-lx-570.jpeg" alt="Lexus LX 570" loading="lazy" />
+              <div class="fc-overlay">
+                <a href="hire.html#book" class="fc-overlay-btn">Book This Car</a>
+              </div>
+              <span class="fc-cat luxury">Luxury</span>
+            </div>
+            <div class="fc-body">
+              <h3>Lexus LX 570</h3>
+              <p>Elegance and performance — the definition of VIP travel.</p>
+              <div class="fc-foot">
+                <span class="fc-price">KES 50,000 <small>/day</small></span>
+                <a href="hire.html" class="fc-arrow"><i class="bx bx-right-arrow-alt"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide fleet-card">
+            <div class="fc-img">
+              <img src="images/Land-cruiser.jpeg" alt="Land Cruiser ZX V8" loading="lazy" />
+              <div class="fc-overlay">
+                <a href="hire.html#book" class="fc-overlay-btn">Book This Car</a>
+              </div>
+              <span class="fc-cat luxury">Luxury</span>
+            </div>
+            <div class="fc-body">
+              <h3>Land Cruiser ZX (V8)</h3>
+              <p>Commanding presence, ultimate comfort, unmatched reliability.</p>
+              <div class="fc-foot">
+                <span class="fc-price">KES 25,000 <small>/day</small></span>
+                <a href="hire.html" class="fc-arrow"><i class="bx bx-right-arrow-alt"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide fleet-card">
+            <div class="fc-img">
+              <img src="images/lux-prados.jpeg" alt="Land Cruiser Prado" loading="lazy" />
+              <div class="fc-overlay">
+                <a href="hire.html#book" class="fc-overlay-btn">Book This Car</a>
+              </div>
+              <span class="fc-cat suv">SUV</span>
+            </div>
+            <div class="fc-body">
+              <h3>Land Cruiser Prado</h3>
+              <p>The safari and upcountry favourite — tough, spacious, reliable.</p>
+              <div class="fc-foot">
+                <span class="fc-price">KES 15,000 <small>/day</small></span>
+                <a href="hire.html" class="fc-arrow"><i class="bx bx-right-arrow-alt"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide fleet-card">
+            <div class="fc-img">
+              <img src="images/Alfard.jpeg" alt="Toyota Alphard" loading="lazy" />
+              <div class="fc-overlay">
+                <a href="hire.html#book" class="fc-overlay-btn">Book This Car</a>
+              </div>
+              <span class="fc-cat exec">MPV</span>
+            </div>
+            <div class="fc-body">
+              <h3>Toyota Alphard</h3>
+              <p>Premium VIP group travel — smooth, spacious, sophisticated.</p>
+              <div class="fc-foot">
+                <span class="fc-price">KES 17,000 <small>/day</small></span>
+                <a href="hire.html" class="fc-arrow"><i class="bx bx-right-arrow-alt"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide fleet-card">
+            <div class="fc-img">
+              <img src="images/Harrier.jpeg" alt="Toyota Harrier" loading="lazy" />
+              <div class="fc-overlay">
+                <a href="hire.html#book" class="fc-overlay-btn">Book This Car</a>
+              </div>
+              <span class="fc-cat suv">SUV</span>
+            </div>
+            <div class="fc-body">
+              <h3>Toyota Harrier</h3>
+              <p>Stylish, comfortable and reliable for city and highway travel.</p>
+              <div class="fc-foot">
+                <span class="fc-price">KES 8,000 <small>/day</small></span>
+                <a href="hire.html" class="fc-arrow"><i class="bx bx-right-arrow-alt"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide fleet-card">
+            <div class="fc-img">
+              <img src="images/Vans.jpeg" alt="Group Travel Van" loading="lazy" />
+              <div class="fc-overlay">
+                <a href="hire.html#book" class="fc-overlay-btn">Book This Van</a>
+              </div>
+              <span class="fc-cat van">Van</span>
+            </div>
+            <div class="fc-body">
+              <h3>Group Travel Van</h3>
+              <p>14–18 seater for group tours, corporates and church trips.</p>
+              <div class="fc-foot">
+                <span class="fc-price">KES 17,000 <small>/day</small></span>
+                <a href="hire.html" class="fc-arrow"><i class="bx bx-right-arrow-alt"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide fleet-card">
+            <div class="fc-img">
+              <img src="images/honda-fit-blue.jpeg" alt="Honda Fit" loading="lazy" />
+              <div class="fc-overlay">
+                <a href="hire.html#book" class="fc-overlay-btn">Book This Car</a>
+              </div>
+              <span class="fc-cat economy">Economy</span>
+            </div>
+            <div class="fc-body">
+              <h3>Honda Fit</h3>
+              <p>Efficient, compact and affordable city driving at its best.</p>
+              <div class="fc-foot">
+                <span class="fc-price">KES 5,000 <small>/day</small></span>
+                <a href="hire.html" class="fc-arrow"><i class="bx bx-right-arrow-alt"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide fleet-card">
+            <div class="fc-img">
+              <img src="images/Crown.jpeg" alt="Toyota Crown" loading="lazy" />
+              <div class="fc-overlay">
+                <a href="hire.html#book" class="fc-overlay-btn">Book This Car</a>
+              </div>
+              <span class="fc-cat exec">Executive</span>
+            </div>
+            <div class="fc-body">
+              <h3>Toyota Crown</h3>
+              <p>Polished executive comfort — ideal for business travel in Nairobi.</p>
+              <div class="fc-foot">
+                <span class="fc-price">KES 7,000 <small>/day</small></span>
+                <a href="hire.html" class="fc-arrow"><i class="bx bx-right-arrow-alt"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ HOW IT WORKS ════════════════════ -->
+  <section class="how-section">
+    <div class="section-wrap">
+      <div class="section-head center">
+        <span class="eyebrow">Simple Process</span>
+        <h2 class="section-title">How to Hire a Car</h2>
+        <p class="section-sub">Three easy steps — and you're on the road in no time.</p>
+      </div>
+
+      <div class="how-steps">
+        <div class="how-step">
+          <div class="hs-bg-num">01</div>
+          <div class="hs-icon"><i class="bx bx-search-alt-2"></i></div>
+          <h3>Browse</h3>
+          <p>Explore 50+ vehicles across luxury, SUV, economy and van categories. Filter by price, category or trip type.</p>
+        </div>
+
+        <div class="how-step">
+          <div class="hs-bg-num">02</div>
+          <div class="hs-icon"><i class="bx bx-edit-alt"></i></div>
+          <h3>Book</h3>
+          <p>Fill in our quick booking form with your details and trip dates. Our team confirms your reservation within 1 hour.</p>
+        </div>
+
+        <div class="how-step">
+          <div class="hs-bg-num">03</div>
+          <div class="hs-icon"><i class="bx bx-trip"></i></div>
+          <h3>Drive</h3>
+          <p>We deliver to your door or you collect from us. Your journey begins — safe, comfortable and stress-free.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ WHY CHOOSE US ═══════════════════ -->
+  <section class="why-section">
+    <div class="section-wrap">
+      <div class="section-head center">
+        <span class="eyebrow">Our Promise</span>
+        <h2 class="section-title">Why Thousands Choose Ressey</h2>
+        <p class="section-sub">We don't just hire out cars — we deliver experiences. Here's what sets us apart.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="wc-icon orange"><i class="bx bx-car"></i></div>
+          <div>
+            <h3>Wide Selection</h3>
+            <p>50+ vehicles across every category — luxury, SUV, economy, vans and airport transfers.</p>
+          </div>
+        </div>
+
+        <div class="why-card">
+          <div class="wc-icon green"><i class="bx bx-money-withdraw"></i></div>
+          <div>
+            <h3>Transparent Pricing</h3>
+            <p>No hidden charges. The price you see is the price you pay — always fair, always clear.</p>
+          </div>
+        </div>
+
+        <div class="why-card">
+          <div class="wc-icon blue"><i class="bx bx-shield-check"></i></div>
+          <div>
+            <h3>Fully Insured</h3>
+            <p>All vehicles carry comprehensive insurance coverage so you drive with complete peace of mind.</p>
+          </div>
+        </div>
+
+        <div class="why-card">
+          <div class="wc-icon orange"><i class="bx bx-map-pin"></i></div>
+          <div>
+            <h3>Door-to-Door Delivery</h3>
+            <p>We deliver and collect from your location across Nairobi and major Kenyan towns.</p>
+          </div>
+        </div>
+
+        <div class="why-card">
+          <div class="wc-icon blue"><i class="bx bx-headphone"></i></div>
+          <div>
+            <h3>24/7 Support</h3>
+            <p>Our team is available around the clock. Call or WhatsApp us any time — we're always here.</p>
+          </div>
+        </div>
+
+        <div class="why-card">
+          <div class="wc-icon green"><i class="bx bx-smile"></i></div>
+          <div>
+            <h3>1,200+ Happy Clients</h3>
+            <p>Trusted by individuals, corporates and tour operators across Kenya since our founding.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ TESTIMONIALS ════════════════════ -->
+  <section class="testi-section">
+    <div class="section-wrap">
+      <div class="section-head center">
+        <span class="eyebrow">Real Reviews</span>
+        <h2 class="section-title">What Our Clients Say</h2>
+        <p class="section-sub">Don't just take our word for it — hear directly from people who've traveled with us.</p>
+      </div>
+
+      <div class="testi-grid">
+        <div class="testi-card">
+          <span class="testi-quote-mark">"</span>
+          <div class="testi-stars">
+            <i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i>
+          </div>
+          <p class="testi-text">Excellent service and spotless cars. The Prado we hired for our safari to Maasai Mara was absolutely perfect. Highly recommend Ressey to anyone!</p>
+          <div class="testi-author">
+            <div class="testi-av">JK</div>
+            <div><strong>James K.</strong><span>Safari Client, Nairobi</span></div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <span class="testi-quote-mark">"</span>
+          <div class="testi-stars">
+            <i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i>
+          </div>
+          <p class="testi-text">Rented a Prado for a weekend trip to Nakuru — smooth ride, very clean and professional staff from the start. Will be booking again next month!</p>
+          <div class="testi-author">
+            <div class="testi-av">AM</div>
+            <div><strong>Anita M.</strong><span>Weekend Traveller</span></div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <span class="testi-quote-mark">"</span>
+          <div class="testi-stars">
+            <i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i>
+          </div>
+          <p class="testi-text">Affordable prices, quick booking and a clean car delivered right to my door. Best car hire experience I've ever had in Nairobi. 100% recommended.</p>
+          <div class="testi-author">
+            <div class="testi-av">DO</div>
+            <div><strong>Daniel O.</strong><span>Business Traveller</span></div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <span class="testi-quote-mark">"</span>
+          <div class="testi-stars">
+            <i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i>
+          </div>
+          <p class="testi-text">They found us a 14-seater van at the last minute for our church group trip. Saved the whole event! The driver was friendly and the van was spotless.</p>
+          <div class="testi-author">
+            <div class="testi-av">SW</div>
+            <div><strong>Susan W.</strong><span>Group Booking</span></div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <span class="testi-quote-mark">"</span>
+          <div class="testi-stars">
+            <i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i>
+          </div>
+          <p class="testi-text">Very professional and punctual. Our driver knew every route and was there before I even called. We will definitely use Ressey for all our corporate travel.</p>
+          <div class="testi-author">
+            <div class="testi-av">PL</div>
+            <div><strong>Peter L.</strong><span>Corporate Client</span></div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <span class="testi-quote-mark">"</span>
+          <div class="testi-stars">
+            <i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i>
+          </div>
+          <p class="testi-text">Great customer service — they genuinely care about their clients. From the first call to the return of the car, everything was seamless and world-class.</p>
+          <div class="testi-author">
+            <div class="testi-av">LN</div>
+            <div><strong>Lucy N.</strong><span>Returning Customer</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ CTA SECTION ═════════════════════ -->
+  <section class="cta-section">
+    <div class="cta-inner">
+      <h2>Ready for Your Next Adventure?</h2>
+      <p>Book your vehicle today and explore Kenya in comfort. Our team confirms every reservation within 1 hour — no deposit required to start.</p>
+      <div class="cta-actions">
+        <a href="hire.html#book" class="btn-cta-white">
+          <i class="bx bx-calendar-check"></i> Book a Car Now
+        </a>
+        <a href="tel:+254727347926" class="btn-cta-outline">
+          <i class="bx bx-phone"></i> Call Us: 0727 347 926
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ FAQ ══════════════════════════════ -->
+  <section class="faq-section">
+    <div class="section-wrap">
+      <div class="section-head center">
+        <span class="eyebrow">Have Questions?</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-sub">Everything you need to know before you hit the road.</p>
+      </div>
+
+      <div class="faq-col">
+        <div class="faq-list">
+
+          <details class="faq-item">
+            <summary>What is the minimum age to hire a vehicle?</summary>
+            <div class="faq-ans">You must be at least <strong>23 years old</strong> with a valid driver's license to hire any vehicle from us.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Do I need driving experience to rent a car?</summary>
+            <div class="faq-ans">Yes. We require at least <strong>2 years of licensed driving experience</strong> for all self-drive bookings.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>What documents do I need?</summary>
+            <div class="faq-ans">You'll need a valid <strong>driver's license</strong>, <strong>national ID or passport</strong>, and a payment method (M-Pesa, card or cash accepted).</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Is there a deposit required when booking?</summary>
+            <div class="faq-ans">A <strong>refundable security deposit</strong> may be required depending on the vehicle selected. It is returned once the car is safely returned in good condition.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can I take the car outside Nairobi on long trips?</summary>
+            <div class="faq-ans">Yes! Our vehicles are available for <strong>upcountry and cross-country travel</strong> across Kenya. Some routes may carry a small additional fee — let us know when booking.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>What happens if I return the car late?</summary>
+            <div class="faq-ans">Late returns may attract an <strong>additional hourly or daily charge</strong>. Please contact us in advance if you need to extend — we're always happy to help.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Do the rental cars come with insurance?</summary>
+            <div class="faq-ans">Yes. All our vehicles include <strong>comprehensive insurance coverage</strong> as part of the hire price for complete peace of mind.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>How can I make a reservation?</summary>
+            <div class="faq-ans">Book online via our <a href="hire.html#book">Hire a Car</a> page, WhatsApp us at <strong>+254 727 347 926</strong>, or call us directly. We confirm every booking within <strong>1 hour</strong>.</div>
+          </details>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ FOOTER ══════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-main">
+
+      <!-- Brand -->
+      <div class="f-col">
+        <div class="f-brand-logo">
+          <img src="images/Ressy-logo.jpeg" alt="Ressey Tours" class="f-logo-img" />
+          <div>
+            <div class="f-brand-name">RESSEY TOURS</div>
+            <div class="f-brand-sub">&amp; Car Hire</div>
+          </div>
+        </div>
+        <p class="f-desc">Kenya's trusted car hire and tours service — delivering safe, comfortable and reliable vehicles across Nairobi and Kenya since 2019.</p>
+        <div class="f-socials">
+          <a href="https://www.instagram.com/the.ressey.tours.and.carhire/" target="_blank" rel="noopener" class="f-social" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="https://www.tiktok.com/@theresseytoursandcarhire" target="_blank" rel="noopener" class="f-social" aria-label="TikTok"><i class="bx bxl-tiktok"></i></a>
+          <a href="https://www.facebook.com/share/1NKqjsqNq9/" target="_blank" rel="noopener" class="f-social" aria-label="Facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="https://wa.me/254727347926" target="_blank" rel="noopener" class="f-social" aria-label="WhatsApp"><i class="bx bxl-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="f-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="hire.html">Hire a Car</a></li>
+          <li><a href="enroll.html">Enroll Your Vehicle</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="rental.html">Rental Prices</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Fleet -->
+      <div class="f-col">
+        <h4>Our Fleet</h4>
+        <ul>
+          <li><a href="hire.html#luxury">Luxury Cars</a></li>
+          <li><a href="hire.html#economy">Economy Cars</a></li>
+          <li><a href="hire.html#executive">SUVs &amp; Executive</a></li>
+          <li><a href="hire.html#vans">Vans &amp; Group Travel</a></li>
+          <li><a href="hire.html#airport">Airport Transfers</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="f-col">
+        <h4>Contact Us</h4>
+        <div class="f-contact-row"><i class="bx bx-phone"></i><span>+254 727 347 926</span></div>
+        <div class="f-contact-row"><i class="bx bx-phone"></i><span>+254 112 005 682</span></div>
+        <div class="f-contact-row"><i class="bx bx-map-pin"></i><span>Muthaiga Square,<br>Along Thika Road, Nairobi</span></div>
+        <div class="f-contact-row"><i class="bx bx-time-five"></i><span>Mon–Sun: 6:00 AM – 10:00 PM</span></div>
+        <a href="hire.html#book" class="f-book-btn"><i class="bx bx-calendar-check"></i> Book a Car Now</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Ressey Tours &amp; Car Hire. All Rights Reserved.</p>
+      <p class="footer-tagline">Driven by trust, powered by you.</p>
+    </div>
   </footer>
-<script>
-  var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 4, //  show 4 cars at once
-    spaceBetween: 20,
-    loop: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-      1024: { slidesPerView: 4 },
-      768: { slidesPerView: 2 },
-      480: { slidesPerView: 1 },
-    },
-  });
-</script>
 
+  <!-- ═══════════════════════════ WHATSAPP FLOAT ══════════════════ -->
+  <a href="https://wa.me/254727347926?text=Hi%20Ressey%2C%20I%20would%20like%20to%20enquire%20about%20hiring%20a%20vehicle." class="wa-float" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+    <i class="bx bxl-whatsapp"></i>
+  </a>
 
+  <!-- ═══════════════════════════ SCRIPTS ═════════════════════════ -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    // Fleet Swiper
+    new Swiper(".fleet-swiper", {
+      slidesPerView: 3,
+      spaceBetween: 24,
+      loop: true,
+      pagination: { el: ".swiper-pagination", clickable: true },
+      navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+      breakpoints: {
+        1100: { slidesPerView: 3 },
+        700:  { slidesPerView: 2 },
+        0:    { slidesPerView: 1 },
+      },
+    });
 
+    // Sticky nav shadow
+    var navbar = document.getElementById("navbar");
+    window.addEventListener("scroll", function () {
+      navbar.classList.toggle("scrolled", window.scrollY > 50);
+    });
 
-  <script src="script.js"></script>
+    // Hamburger menu
+    var hamburger = document.getElementById("hamburger");
+    var navLinks  = document.getElementById("navLinks");
+    hamburger.addEventListener("click", function () {
+      var isOpen = navLinks.classList.toggle("open");
+      hamburger.innerHTML = isOpen
+        ? '<i class="bx bx-x"></i>'
+        : '<i class="bx bx-menu"></i>';
+    });
+
+    // Close menu on link click
+    navLinks.querySelectorAll("a").forEach(function (a) {
+      a.addEventListener("click", function () {
+        navLinks.classList.remove("open");
+        hamburger.innerHTML = '<i class="bx bx-menu"></i>';
+      });
+    });
+
+    // Scroll-reveal animation
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add("visible");
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll(
+      ".fleet-card, .service-card, .why-card, .testi-card, .how-step, .stat-card"
+    ).forEach(function (el) { observer.observe(el); });
+  </script>
+
 </body>
 </html>
